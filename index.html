@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <!--Базовая структура HTML-документа-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Дом шоколада</title>
+        <!--Добавление фавиконки-->
+        <link rel="icon" href="picture\favicon.ico" sizes="any">
+        <link rel="stylesheet" href="style.css"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Advent+Pro&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class = "progress"></div>
+        <script>
+            const progress = document.querySelector('.progress');
+            window.addEventListener('scroll', progressBar);
+
+            function progressBar(e){
+                let windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                let per = windowScroll / windowHeight * 100;
+
+                progress.style.width = per + '%';
+            }
+        </script>
+        <div class = "container">
+            <header>
+                <div class = "header_body">
+                        <a href="index.html" class = "header_logo">
+                            <img src="picture/логотип.png" alt="factory">
+                        </a>
+                        <!-- <input class="side-menu" type="checkbox" id="side-menu"/>
+                        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label> -->
+                        <div class = "header_burger">
+                            <span></span>
+                        </div>
+                        <nav class="header_nav">
+                            <ul class = "header_list">
+                                <li><a href = "index.html#history" class = "header_list">История предприятия</a></li>
+                                <li><a href = "index.html#prod" class = "header_list">Продукция</a></li>
+                                <li><a href = "index.html#factory" class = "header_list">О фабрике</a></li>
+                                <li><a href = "index.html#information" class = "header_list">Прочая информация</a></li>
+                                <li><a href = "vxod.html" class = "header_list">Регистрация</a></li>
+                            </ul>
+                        </nav>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                            var headerBurger = document.querySelector('.header_burger');
+                            var headerNav = document.querySelector('.header_nav');
+                            
+                            headerBurger.addEventListener('click', function(event) {
+                                headerBurger.classList.toggle('active');
+                                headerNav.classList.toggle('active');
+                            });
+                        });
+                        </script>
+                </div>
+            </header>
+            <main>
+                    <h1>История предприятия</h1>
+                    <section id = "history">
+                        
+                        <p class = "history_text"><img src = "picture/factory.png" class="factory"><strong style="font-size: 1.2em;">"Дом шоколада" - является одной из старейших кондитерских фабрик страны.</strong><br>
+                            "Дом шоколада" - является одной из старейших кондитерских фабрик страны. История предприятия началась в 1847 году.
+                            Создатели вложили всю свою душу и страсть в каждую деталь - от выбора лучших какао-бобов до создания
+                            уникальных рецептов шоколадных изделий</a>.
+                        
+                            С появлением первых партий шоколада, "Дом шоколада" начал привлекать внимание ценителей шоколада из разных уголков мира.
+                            И с каждой последующей проданной плиткой фабрика завоевывала все больше сердец и расширяла свою деятельность.
+                        
+                            Строгий труд, страсть к шоколаду и преданность качеству сделали "Дом шоколада" не только <i>преуспевающей компанией</i>,
+                            но и символом <em>мечты</em>, осуществленной вкусом.
+                        </p>
+                    </section>
+                    <h1  id = "prod">Наша продукция</h1>
+                    <div class = "products">
+                        <div class ="product">
+                            <h2>Нежный молочный шоколад</h2>
+                            <a href="product1.html"><img src = "picture/milk_chocolate.jpg"></a>
+                        </div>
+                        <div class = "product">
+                            <h2>Горький шоколад с ягодами</h2>
+                            <a href="product2.html"><img src = "picture/chocolate_klukva.jpg"></a>
+                        </div>
+                        <div class = "product">
+                            <h2>Молочный шоколад без сахара</h2>
+                            <a href="product3.html"><img src = "picture/chocolate_no_sugar.jpg"></a>
+                        </div>
+                        <div class = "product">
+                            <h2>Белый шоколад "Гречишный"</h2>
+                            <a href="product4.html"><img src = "picture/white_chocolate.jpg"></a>
+                        </div>
+                        <div class = "product">
+                            <h2>Конфеты кокосовые в шоколаде</h2>
+                            <a href="product5.html"><img src = "picture/coconut_chocolate.jpg"></a>
+                        </div>
+                        <div class = "product">
+                            <h2>Шоколад карамельный</h2>
+                            <a href="product6.html"><img src = "picture/caramel_chocolate.jpg"></a>
+                        </div>
+                    </div>
+                    <form>
+                        <fieldset>
+                            <legend>Выберите лучший продукт месяца!</legend>
+                            <label><input type="radio">Молочный шоколад</label><br>
+                            <label><input type="radio">Горький шоколад с ягодами</label><br>
+                            <label><input type="radio">Молочный шоколад без сахара</label><br>
+                            <label><input type="radio">Белый шоколад "Гречишный"</label><br>
+                            <label><input type="radio">Конфеты кокосовые</label><br>
+                            <button type="submit" style="margin-top: 5px; cursor: pointer;border: solid 1px; background-color: rgb(238,226,220); font-family: 'Advent Pro', sans-serif; font-size: 1em; color: rgb(18,60,105);">Выбрать</button>
+                        </fieldset>
+                    </form>
+                    <h1 id = "factory">Секрет вкуса нашего шоколада в отборных ингредиентах!</h1>
+                    <div class = "vkus">
+                        <div class = "block-center">
+                            <img src = "picture/shokolad.png">
+                        </div>
+                        <div class="block1">
+                            <img src = "picture/cocoa_tree.png" class = "img-compound">
+                            <p class = "text-compound">Мы получаем наше какао из ведущих плантаций, где заботятся о качестве и устойчивости производства. Нежный аромат и насыщенный вкус какао-бобов являются ключевыми составляющими наших шоколадных изделий.</p>
+                        </div>
+                        <div class="block2">
+                            <img src = "picture/butter.png" class = "img-compound">
+                            <p class = "text-compound">Полученное при переработке какао-бобов, это натуральное масло играет важную роль в создании сливочного послевкусия. Оно придает шоколаду гладкую текстуру и улучшает его вкус.</p>
+                        </div>
+                        <div class="block3">
+                            <img src = "picture/brown-sugar.png" class = "img-compound">
+                            <p class = "text-compound">Мы используем тростниковый сахар, чтобы придать сладость нашему шоколаду. Важно отметить, что мы не добавляем излишне большие количества сахара, стремясь сохранить и передать вкусы какао.</p>
+                        </div>
+                        <div class="block4">
+                            <img src = "picture/milk.png" class = "img-compound">
+                            <p class = "text-compound"> Для молочных шоколадных изделий мы используем только свежее натуральное молоко, которое придает нежность и кремовость нашему шоколаду.</p>
+                        </div>
+                        <div class="block5">
+                            <img src = "picture/berries.png" class = "img-compound">
+                            <p class = "text-compound">Для создания разнообразных вкусовых комбинаций используются сочные ягоды, полученные благодаря фермерам, которым мы доверяем</p>
+                        </div>
+                        <div class="block6">
+                            <img src = "picture/nuts.png" class = "img-compound">
+                            <p class = "text-compound">Насладитесь идеальным балансом шоколада и орехов в каждом кусочке, и позвольте этому изысканному дуэту удивить вас</p>
+                        </div>
+                    </div>
+                    <h1 style ="margin-top: 0;">Узнайте больше о фабрике!</h1>
+                    <div class = "facts">
+                        <p class = "number1">20</p>
+                        <p class = "fact1">20 тысяч тонн шоколада в год производится на нашей фабрике</p>
+                        <p class = "number2">32</p>
+                        <p class = "fact2"> на 32% мы увеличили производство за последние 5 лет</p>
+                        <p class = "number3">5000</p>
+                        <p class = "fact3">около 5000 кг сахара фабрика использует каждую неделю</p>
+                        <p class = "number4">10</p>
+                        <p class = "fact4">10 млн проданных шоколадных плиток в 2021 году</p>
+                    </div>
+                    <h1 class="title">Экскурсии на производство шоколада</h1>
+                    <div class="gallery">
+                        <div class = "gallery-item fade">
+                            <div class = "numbertext"></div>
+                            <img src = "picture/proizvodstvo1.jpeg">
+                            <p class="text">В мире шоколада - каждая фотография сладкая!</p>
+                        </div>
+                        <div class = "gallery-item fade">
+                            <div class = "numbertext"></div>
+                            <img src = "picture/proizvodstvo2.jpg">
+                            <p class="text">От плитки к шедевру: магия шоколада раскрывается</p>
+                        </div>
+                        <div class = "gallery-item fade">
+                            <div class = "numbertext"></div>
+                            <img src = "picture/proizvodstvo3.jpg">
+                            <p class="text">Насыщенные цвета и ароматы</p>
+                        </div>
+                        <div class = "gallery-item fade">
+                            <div class = "numbertext"></div>
+                            <img src = "picture/proizvodstvo4.jpg">
+                            <p class="text">Добро пожаловать в мир шоколадного совершенства!</p>
+                        </div>
+                        <div class = "gallery-item fade">
+                            <div class = "numbertext"></div>
+                            <img src = "picture/proizvodstvo5.jpg">
+                            <p class="text">Погружение в сладкую атмосферу производства шоколада</p>
+                        </div>
+                        <div class = "gallery-item fade">
+                            <div class = "numbertext"></div>
+                            <img src = "picture/proizvodstvo6.jpg">
+                            <p class="text">Шоколадные рецепты, секреты и феерические впечатления!</p>
+                        </div>
+                        <a class = "prev" onclick = "plusSlides(-1)">&#10094</a>
+                        <a class = "next" onclick = "plusSlides(+1)">&#10095</a>
+                    </div>
+                <script>
+                    var slideIndex = 1;
+                    showSlides(slideIndex);
+
+                    function plusSlides(n){
+                        showSlides(slideIndex += n);
+                    }
+
+                    function currentSlide(n){
+                        showSlides(slideIndex = n);
+                    }
+
+                    function showSlides(n){
+                        var i;
+                        var slides = document.getElementsByClassName("gallery-item");
+                        var dots = document.getElementsByClassName("dot");
+
+                        if(n > slides.length){
+                            slideIndex = 1
+                        }
+                        if (n < 1){
+                            slideIndex = slides.length
+                        }
+                        for (i = 0; i < slides.length; i++){
+                            slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++){
+                            dots[i].className = dots[i].className.replace("active", "")
+                        }
+                        slides[slideIndex - 1].style.display = "block";
+                        dots[slideIndex - 1].className += "active";
+                    }
+                </script>
+            </main>
+        </div>
+        <div id = "information">
+            <footer class = "footer">
+                <!--Ссылка на номер телефона и почтовый клиент-->
+                <address class = "information">
+                Связь с нами:<br>
+                <a href="tel:+7(495)324-00-11">+7(495)324-00-11</a><br>
+                <a href="mailto:domshokolada@gmail.com">domshokolada@gmail.com</a>
+                </address>
+                <a href = "feedback.html">ОБРАТНАЯ СВЯЗЬ</a>
+                <div class = "flex_social">
+                    <div class="social linkedin">
+                        <img src = "picture/tg.png">
+                    </div>
+                        <div class="social vk">
+                            <img src = "picture/vk.png">
+                        </div>
+                        <div class="social youtube">
+                            <img src="picture/yt.png" alt="">
+                        </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

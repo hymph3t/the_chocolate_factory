@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <!--Базовая структура HTML-документа-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Дом шоколада</title>
+        <!--Добавление фавиконки-->
+        <link rel="icon" href="picture\favicon.ico" sizes="any">
+        <link rel="stylesheet" href="style.css"> 
+        <link rel="stylesheet" href="style2.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Advent+Pro&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class = "container">
+            <header>
+                <div class = "header_body">
+                        <a href="index.html" class = "header_logo">
+                            <img src="picture/логотип.png" alt="factory">
+                        </a>
+                        <div class = "header_burger">
+                            <span></span>
+                        </div>
+                        <nav class="header_nav">
+                            <ul class = "header_list">
+                                <li><a href = "index.html.history" class = "header_list">История предприятия</a></li>
+                                <li><a href = "index.html#prod" class = "header_list">Продукция</a></li>
+                                <li><a href = "index.html#factory" class = "header_list">О фабрике</a></li>
+                                <li><a href = "index.html#information" class = "header_list">Прочая информация</a></li>
+                            </ul>
+                        </nav>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                            var headerBurger = document.querySelector('.header_burger');
+                            var headerNav = document.querySelector('.header_nav');
+                            
+                            headerBurger.addEventListener('click', function(event) {
+                                headerBurger.classList.toggle('active');
+                                headerNav.classList.toggle('active');
+                            });
+                        });
+                        </script>
+                </div>
+            </header>
+        </div>
+        <div class = "container">
+            <main>
+                <div class = "columns">
+                    <div class = "columns_item">
+                        <h1>Молочный шоколад без сахара</h1>
+                        <img src="picture/chocolate_no_sugar.jpg">
+                    </div>
+                    <div class = "columns_item">
+                        <h2>Описание</h2>
+                        <p>Классический молочный шоколад с натуральным экстрактом ванили. Изготовлен без добавления сахара, на альтернативных подсластителях: мальтите и стевии. Подходит к чаю, кофе, для приготовления десертов и украшения кондитерских изделий.</p>
+                        <h2>Состав</h2>
+                        <p>Какао-масло, какао-тертое, молоко сухое обезжиренное, сухая молочная сыворотка, подсластитель - мальтит, инулин, молоко сухое цельное, эмульгатор – лецитины (соевый), подсластитель - стевия, натуральный экстракт ванили
+                            Продукция производится на предприятии, где используются аллергены: арахис, злаки, содержащие глютен, орехи.
+                            Содержит подсластители (сахарозаменители). При чрезмерном употреблении могут оказывать слабительное действие.</p>
+                        <h2>Пищевая и энергетическая ценность в 100 г.</h2>
+                        <p>белки 11,1 г; жиры 31,3 г; углеводы 36 г; 470,1 ккал</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div id = "information">
+            <footer class = "footer">
+                <!--Ссылка на номер телефона и почтовый клиент-->
+                <address class = "information">
+                Связь с нами:<br>
+                <a href="tel:+7(495)324-00-11">+7(495)324-00-11</a><br>
+                <a href="mailto:domshokolada@gmail.com">domshokolada@gmail.com</a>
+                </address>
+                <a href = "feedback.html">ОБРАТНАЯ СВЯЗЬ</a>
+                <div class = "flex_social">
+                    <div class="social linkedin">
+                        <img src = "picture/tg.png">
+                    </div>
+                        <div class="social vk">
+                            <img src = "picture/vk.png">
+                        </div>
+                        <div class="social discord">
+                            <img src="picture/yt.png" alt="">
+                        </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

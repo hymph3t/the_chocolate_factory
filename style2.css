@@ -1,0 +1,32 @@
+.columns{
+    display: grid;
+    gap: 20px;
+    margin-top: 95px;
+    grid-template-areas: 
+    "column1 column2";
+    align-items: center;
+}
+.columns_item1{
+    width: 50%;
+    grid-area: column1;
+}
+.columns_item2{
+    width: 50%;
+    grid-area: column2;
+}
+.columns_item img{
+    width: 100%;
+}
+h1{
+    font-size: 2em;
+}
+.footer{
+    margin-top: 20px;
+}
+@media (max-width: 767px) {
+    .columns{
+        grid-template-areas: 
+        "column1"
+        "column2";
+    }
+}
